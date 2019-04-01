@@ -19,4 +19,5 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/',include('my_own_test.urls')),
+    path('project_allotment_portl/',include('Project_Allotment_Portal.urls'))
 ]
