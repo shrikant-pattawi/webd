@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Singnup
+{% endblock %}
+
+{% block title2 %}
+    Sign up
+{% endblock %}
+
+{% block content %}
+    <form class="my-form" action="{% url 'accounts:signup' %} " method="post">
+        {{ form }}
+        <input type="submit" value="Signup">
+    </form>
+{% endblock %}

@@ -48,15 +48,15 @@
 			    </ul>
 			    <ul class="nav navbar-nav navbar-right" >
 				    {% if 'gamer' not in request.session %}
-				    	<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					    <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				    	<li><a href="{% url 'accounts:signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					    <li><a href="{% url 'accounts:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 				    {% endif %}
 
 					{% if 'gamer' in request.session %}
 
                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <?php echo $_SESSION["gamer"]["name"]; ?> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="profile.php">Profile</a></li>
+                                <li><a href="{% url 'accounts:signup' %}">Profile</a></li>
                                 <li><a href="logout.php">Logout</a></li>
                             </ul>
                         </li>
@@ -69,6 +69,24 @@
 		  </div>
 		</nav>
 
+        <div class="jumbotron">
+            <div class="container text-center">
+				<h1>
+                    {% block title2 %}
+                    
+                    {% endblock %}
+                </h1>
+				<strong>
+                    <h2 class="mark">
+                        {% block quote %}
+                        
+                        {% endblock %}
+                    </h2>
+                </strong>
+			</div>
+		</div>
+
+        
         <div id="content">
             {% block content %}
             {% endblock %}

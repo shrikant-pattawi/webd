@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'my_own_test',
-    'accounts.apps.AccountsConfig',
+    'accounts',
     'Project_Allotment_Portal'
 ]
 
