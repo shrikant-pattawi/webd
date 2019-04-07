@@ -10,6 +10,7 @@
 
 {% block content %}
     <form class="my-form" action="{% url 'accounts:signup' %} " method="post">
+        {% csrf_token %}
         {{ form }}
         <input type="submit" value="Signup">
     </form>

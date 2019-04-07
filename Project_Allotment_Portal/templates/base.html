@@ -35,38 +35,42 @@
 		    <div class="container-fluid">
 			    <div class="navbar-header">
 			    <!--  Button for collapse of main nav bar  -->
-			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-bar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-			    </button>
-			    <div class="active"><a class="navbar-brand active" href="#">Project Allotment Portal</a></div>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-bar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="active"><a class="navbar-brand active" href="#">Project Allotment Portal</a>
+                    </div>
 			    </div>
-			<div class="collapse navbar-collapse" id="main-nav-bar">
-			    <ul class="nav navbar-nav">
-				    <li ><a href="category.php">Categories</a></li>
-			    </ul>
-			    <ul class="nav navbar-nav navbar-right" >
-				    {% if 'gamer' not in request.session %}
-				    	<li><a href="{% url 'accounts:signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					    <li><a href="{% url 'accounts:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-				    {% endif %}
+                <div class="collapse navbar-collapse" id="main-nav-bar">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="category.php">Categories</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" >
+                        {% if user.is_authenticated %}
 
-					{% if 'gamer' in request.session %}
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{ user.username }} <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'accounts:signup' %}">Profile</a></li>
+                                    <li>
+                                        <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                                            {% csrf_token %}
+                                            <button type="submit"> Logout </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
 
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <?php echo $_SESSION["gamer"]["name"]; ?> <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{% url 'accounts:signup' %}">Profile</a></li>
-                                <li><a href="logout.php">Logout</a></li>
-                            </ul>
-                        </li>
+                        {% else %}
 
-                    {% endif %}
+                            <li><a href="{% url 'accounts:signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="{% url 'accounts:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
-
-			  </ul>
-			</div>
-		  </div>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
 		</nav>
 
         <div class="jumbotron">
