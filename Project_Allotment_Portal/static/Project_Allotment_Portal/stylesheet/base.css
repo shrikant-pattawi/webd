@@ -1,11 +1,14 @@
+
 	.navbar-brand {
 		padding: 20px 15px;
     	font-size: 30px;
 	}
+
 	#main-nav-bar>ul>li>a{
 		padding: 20px 10px;
 		font-size:20px
 	}
+
 	.carousel-inner img {
 		/*width: 100%;*/
 		margin: auto;
@@ -13,6 +16,7 @@
 		max-height: 600px;
 		max-width: 700px;
 	}
+
 	@media (max-width: 600px) {
 		.carousel-caption {
 			display: none;
