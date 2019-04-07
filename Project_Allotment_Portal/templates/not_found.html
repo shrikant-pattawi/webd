@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Page Not Found
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+			<div class="container text-center">
+				<h1>
+                    Page Not Found
+                </h1>
+				<strong>
+                    <h2 class="mark">
+                        You seem to be lost . Try the following links :-
+                    </h2>
+                </strong>
+			</div>
+		</div>
+
+    <ul>
+        <li>
+            <h3 style="align-content: center;">
+                <a href="{% url 'Project_Allotment_Portal:home' %}"> Home Page </a>
+            </h3>
+        </li>
+    </ul>
+{% endblock %}
