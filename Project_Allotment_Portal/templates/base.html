@@ -1,14 +1,83 @@
-<!-- templates/base.html -->
+
+{% load static  %}
+
+
+
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
-</head>
-<body>
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
-</body>
+
+	<head>
+		<title>
+            {% block title %}
+            {% endblock %}
+        </title>
+
+        <!--    fixing viewport scale            -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!--    Including Jquery and Bootstrap            -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	    <link rel="icon" type="image/x-icon" href="{% static 'main_icon.ico' %}">
+	    <link rel="stylesheet" type="text/css" href="{% static 'Project_Allotment_Portal/stylesheet/base.css' %}">
+
+	    <script type="text/javascript" src="{% static 'Project_Allotment_Portal/javascript/base.js' %}"></script>
+	</head>
+
+
+	<body>
+
+        <!-- Header -->
+
+		<nav class="navbar navbar-fixed-top">
+		    <div class="container-fluid">
+			    <div class="navbar-header">
+			    <!--  Button for collapse of main nav bar  -->
+			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-bar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+			    </button>
+			    <div class="active"><a class="navbar-brand active" href="#">Project Allotment Portal</a></div>
+			    </div>
+			<div class="collapse navbar-collapse" id="main-nav-bar">
+			    <ul class="nav navbar-nav">
+				    <li ><a href="category.php">Categories</a></li>
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right" >
+				    {% if 'gamer' not in request.session %}
+				    	<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					    <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				    {% endif %}
+
+					{% if 'gamer' in request.session %}
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <?php echo $_SESSION["gamer"]["name"]; ?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="profile.php">Profile</a></li>
+                                <li><a href="logout.php">Logout</a></li>
+                            </ul>
+                        </li>
+
+                    {% endif %}
+
+
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+
+        {% block content %}
+        {% endblock %}
+
+        <!--        Footer      -->
+
+        <div id="footer">
+
+        </div>
+
+	</body>
 </html>
+
