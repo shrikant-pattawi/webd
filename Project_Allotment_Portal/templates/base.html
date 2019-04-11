@@ -49,14 +49,14 @@
 			    </div>
                 <div class="collapse navbar-collapse" id="main-nav-bar">
                     <ul class="nav navbar-nav">
-                        <li ><a href="category.php">Categories</a></li>
+                        <li ><a href="{% url 'accounts:profile' %}">Profile</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right" >
                         {% if user.is_authenticated %}
 
                             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{ user.username }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{% url 'accounts:signup' %}">Profile</a></li>
+                                    <li><a href="{% url 'accounts:profile' %}">Profile</a></li>
                                     <li>
                                         <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
                                             {% csrf_token %}

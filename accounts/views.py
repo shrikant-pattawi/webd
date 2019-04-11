@@ -36,5 +36,13 @@ def user_logout(request):
         return redirect('Project_Allotment_Portal:home')
 
 def user_profile(request):
-    return render(request, 'accounts/profile.html')
-
+    if request.method == 'POST':
+        form = forms.ProfileDetails(request.POST, request.FILES)
+        if form.is_valid():
+            temp = form.save(commit=False)
+            temp.user_user = request.user
+            temp.save()
+            return redirect('Project_Allotment_Portal:home')
+    else:
+        form = forms.ProfileDetails()
+    return render(request, 'accounts/profile.html', {'form':form} )

@@ -1,24 +1,30 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block static %}
+{% block statics %}
     <link rel="stylesheet" type="text/css" href="{% static 'Project_Allotment_Portal/stylesheet/profile.css' %} " >
-    <script type="text/javascript" src="{% static 'Project_Allotment_Protal/javascript/profile.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Project_Allotment_Portal/javascript/profile.js' %}"></script>
 {% endblock %}
 
 {% load static %}
 
 {% block title %}
-    Project Allotment Portal
+    Profile
 {% endblock %}
 
 {% block title2 %}
-     Project Allotment Portal
+     Profile
 {% endblock %}
 
 {% block quote %}
-    Get used to the environment where even 99.9% is considered a faliure.
+
 {% endblock %}
 
 {% block content %}
+        <form class="profile_details" action="{% url 'accounts:profile' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="submit">
+        </form>
 
 {% endblock %}
