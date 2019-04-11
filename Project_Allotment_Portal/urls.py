@@ -5,9 +5,13 @@ from . import views
 app_name= 'Project_Allotment_Portal'
 
 urlpatterns = [
-    #path('',views.signup, name='signup'),
 
-     re_path(r'^$',views.home,name="home"),
+     re_path(r'^$', views.home, name="home"),
+
+     #path('',views.signup, name='signup'),
+
+     #re_path(r'^/profile', views.profile, name="profile"),
+
      #path('details/',views.details, name="details"),
      #path('adduser',views.add_user,name="adduser")
 ]

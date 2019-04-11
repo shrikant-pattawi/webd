@@ -5,6 +5,8 @@ from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth import login,logout
+from . import forms
+
 
 def user_signup(request):
     if request.method == 'POST':
@@ -32,3 +34,7 @@ def user_logout(request):
     if request.method == 'POST':
         logout(request)
         return redirect('Project_Allotment_Portal:home')
+
+def user_profile(request):
+    return render(request, 'accounts/profile.html')
+

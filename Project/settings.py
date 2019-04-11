@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'my_own_test',
     'accounts',
-    'Project_Allotment_Portal'
+    'Project_Allotment_Portal',
+    'phonenumber_field'
 ]
 
 MIDDLEWARE = [

@@ -6,3 +6,4 @@ def first(request):
 
 def home(request):
     return render(request,'home2.html',{})
+
