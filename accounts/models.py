@@ -3,12 +3,12 @@ from django.contrib.auth.models import User
 # from phonenumber_field.modelfields import PhoneNumberField
 
 
-    #add
 class User_details(models.Model):
 
     GENDER_CHOICES =(
         ('F','Female'),
         ('M','Male'),
+        ('P','Prefer Not To Say')
     )
 
     user_reg_no = models.DecimalField(verbose_name="reg_no", max_digits=8, decimal_places=0, unique=True,blank=False)

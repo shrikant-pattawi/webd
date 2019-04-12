@@ -6,7 +6,7 @@
     <script type="text/javascript" src="{% static 'Project_Allotment_Portal/javascript/profile.js' %}"></script>
 {% endblock %}
 
-{% load static %}
+{#{% load static %}#}
 
 {% block title %}
     Profile
@@ -17,14 +17,52 @@
 {% endblock %}
 
 {% block quote %}
-
+{#    <h1>kill</h1>#}
+{#    {% if gamer_data_verified in requesr.session %}#}
+{#        <h1>Hi</h1>#}
+        {% if request.session.gamer_data_verified != 0 %}
+            Better keep your fingers crossed
+        {% endif %}
+{#    {% endif %}#}
 {% endblock %}
 
 {% block content %}
-        <form class="profile_details" action="{% url 'accounts:profile' %}" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="submit">
-        </form>
+
+{#    {% if gamer_data_verified in requesr.session %}#}
+        {% if request.session.gamer_data_verified == 1 %}
+            <h1>    Your Data is under verification process .   </h1>
+        {% endif %}
+        {% if request.session.gamer_data_verified > 1 %}
+            <h1>    Your Data Has been verified now you can move on to creating your team </h1>
+            <br>
+            <a href="{% url 'accounts:team' %}">Team Creation</a>
+        {% endif %}
+        {% if request.session.gamer_data_verified == 0 %}
+            <form class="profile_details" action="{% url 'accounts:profile' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="submit">
+            </form>
+        {% endif %}
+{#    {% else %}#}
+{#            <form class="profile_details" action="{% url 'accounts:profile' %}" method="post" enctype="multipart/form-data">#}
+{#                {% csrf_token %}#}
+{#                {{ form }}#}
+{#                <input type="submit" value="submit">#}
+{#            </form>#}
+{#    {% endif %}#}
+
+
+
+
+    <script>
+        console.log("{{ request.session.gamer_data_verified }}")
+    </script>
+
+
+
+
+
+
 
 {% endblock %}

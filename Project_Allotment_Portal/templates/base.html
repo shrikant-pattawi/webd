@@ -49,7 +49,10 @@
 			    </div>
                 <div class="collapse navbar-collapse" id="main-nav-bar">
                     <ul class="nav navbar-nav">
-                        <li ><a href="{% url 'accounts:profile' %}">Profile</a></li>
+                        {% if user.is_authenticated %}
+                            <li ><a href="{% url 'accounts:profile' %}">Profile</a></li>
+                            <li ><a href="{% url 'accounts:team' %}">Team</a></li>
+                        {% endif %}
                     </ul>
                     <ul class="nav navbar-nav navbar-right" >
                         {% if user.is_authenticated %}
