@@ -6,10 +6,6 @@
     <script type="text/javascript" src="{% static 'Project_Allotment_Portal/javascript/team.js' %}"></script>
 {% endblock %}
 
-{% if request %}
-
-{% endif %}
-
 {% block title %}
     Team
 {% endblock %}
@@ -22,6 +18,13 @@
     Your team is as strong as your weakest link so think carefully
 {% endblock %}
 
-{% block content %}
 
+
+{% block content %}
+    {% if request.session.gamer_data_verified <= 1 %}
+        <h1> Please wait for your details verification first. </h1>
+    {% else %}
+
+
+    {% endif %}
 {% endblock %}
