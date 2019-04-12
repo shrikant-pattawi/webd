@@ -68,7 +68,8 @@ def user_profile(request):
 
 
 def user_team(request):
-    pass
+    update(request)
+    return render(request, 'accounts/team.html')
 
 
 def update(request):
@@ -77,6 +78,7 @@ def update(request):
         request.session['gamer_data_verified'] = temp.data_verified
         request.session['gamer_authority'] = temp.authority
     except ObjectDoesNotExist:
-        pass
+        request.session['gamer_data_verified'] = 0
+        request.session['gamer_authority'] = 0
 
 
