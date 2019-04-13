@@ -33,9 +33,14 @@
             <h1>    Your Data is under verification process .   </h1>
         {% endif %}
         {% if request.session.gamer_data_verified > 1 %}
-            <h1>    Your Data Has been verified now you can move on to creating your team </h1>
-            <br>
-            <a href="{% url 'accounts:team' %}">Team Creation</a>
+            {% if request.session.gamer_authority < 3 %}
+                <h1>    Your Data Has been verified now you can move on to creating your team </h1>
+                <br>
+                <h1><a href="{% url 'accounts:team' %}">Team Creation</a></h1>
+            {% else %}
+                <h1>    Your Data Has been verified . </h1>
+                <br>
+            {% endif %}
         {% endif %}
         {% if request.session.gamer_data_verified == 0 %}
             <form class="profile_details" action="{% url 'accounts:profile' %}" method="post" enctype="multipart/form-data">
