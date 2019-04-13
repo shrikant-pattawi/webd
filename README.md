@@ -14,7 +14,7 @@ Pillow
 
 
 
-## ALL Features
+# ALL Features
 
 Signup.
 Login.
@@ -27,7 +27,7 @@ Team Leaders can send requests to different users of different groups.
 Other members can send request for team leaders.
 Then team is created on acceptance of requests.
 
-## Currently working on
+### Currently working on
 
 Then if Professor he can validate students profile.
 Then based on CPI students are divided and a team leaders are chosen.
