@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'my_own_test',
     'accounts',
     'Project_Allotment_Portal',
-    'phonenumber_field'
 ]
 
 MIDDLEWARE = [
