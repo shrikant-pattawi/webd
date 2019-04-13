@@ -68,15 +68,21 @@ def user_profile(request):
 
 
 def user_team(request):
-    pass
+    update(request)
+    return render(request, 'accounts/team.html')
 
 
 def update(request):
     try:
-        temp = User_details.objects.get(user_user=request.user)
-        request.session['gamer_data_verified'] = temp.data_verified
-        request.session['gamer_authority'] = temp.authority
+        if request.user.is_authenticated:
+            temp = User_details.objects.get(user_user=request.user)
+            request.session['gamer_data_verified'] = temp.data_verified
+            request.session['gamer_authority'] = temp.authority
+        else :
+            request.session['gamer_data_verified'] = 0
+            request.session['gamer_authority'] = 0
     except ObjectDoesNotExist:
-        pass
+        request.session['gamer_data_verified'] = 0
+        request.session['gamer_authority'] = 0
 
 

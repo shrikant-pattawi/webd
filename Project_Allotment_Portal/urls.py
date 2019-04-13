@@ -2,7 +2,7 @@ from django.urls import path,re_path
 from django.urls import include
 from . import views
 
-app_name= 'Project_Allotment_Portal'
+app_name = 'Project_Allotment_Portal'
 
 urlpatterns = [
 
