@@ -57,15 +57,19 @@
                                 console.log("hi");
 
                             </script>
-                            {% if request.session.gamer_authority < 3 %}
+                            {% if request.session.gamer_authority < 5 %}
                                 <li ><a href="{% url 'accounts:team' %}">Team</a></li>
-                                <li ><a href="{% url 'accounts:profile' %}">Requests</a></li>
-                                <li ><a href="{% url 'accounts:profile' %}">Notification</a></li>
+                                <li ><a href="{% url 'accounts:requests' %}">Requests</a></li>
+                                <li ><a href="{% url 'Project_Allotment_Portal:notification' %}">Notification</a></li>
                             {% endif %}
-                            {% if request.session.gamer_authority >= 3 %}
-                                <li ><a href="{% url 'accounts:profile' %}">Validations</a></li>
+                            {% if request.session.gamer_authority >= 5 %}
+                                <li ><a href="{% url 'accounts:validate' %}">Validate</a></li>
                             {% endif %}
+{#                            {% if request.session.gamer_authority == 7 %}#}
+{#                                <li ><a href="{% url 'accounts:authority_change' %}">Authority</a></li>#}
+{#                            {% endif %}#}
                         {% endif %}
+                        <li ><a href="{% url 'Project_Allotment_Portal:contact' %}">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right" >
                         {% if user.is_authenticated %}

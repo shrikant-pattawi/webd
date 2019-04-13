@@ -6,12 +6,12 @@ app_name = 'Project_Allotment_Portal'
 
 urlpatterns = [
 
-     #re_path(r'^$', views.home, name="home"),
-
      path('',views.home, name='home'),
+     re_path(r'^contact/$', views.contact, name='contact'),
+     re_path(r'^notification/$', views.notification, name='notification'),
 
-     #re_path(r'^/profile', views.profile, name="profile"),
-
-     #path('details/',views.details, name="details"),
-     #path('adduser',views.add_user,name="adduser")
+     # re_path(r'^$', views.home, name="home"),
+     # re_path(r'^/profile', views.profile, name="profile"),
+     # path('details/',views.details, name="details"),
+     # path('adduser',views.add_user,name="adduser")
 ]

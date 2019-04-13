@@ -67,10 +67,17 @@ def user_profile(request):
     return render(request, 'accounts/profile.html', {'form':form} )
 
 
-def user_team(request):
+def team(request):
     update(request)
     return render(request, 'accounts/team.html')
 
+def validate(request):
+    update(request)
+    return render(request, 'accounts/validate.html')
+
+def requests(request):
+    update(request)
+    return render(request, 'accounts/requests.html')
 
 def update(request):
     try:
