@@ -2,6 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 # from phonenumber_field.modelfields import PhoneNumberField
 
+class user_requests(models.Model):
+    user_from = models.ForeignKey(User, default=None, related_name="user_from", on_delete=models.CASCADE)
+    user_to = models.ForeignKey(User, default=None, related_name="user_to", on_delete=models.CASCADE)
+
+
 
 class User_details(models.Model):
 
