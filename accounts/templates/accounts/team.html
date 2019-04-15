@@ -26,7 +26,7 @@
 
         <h1> Please wait for your details verification first. </h1>
 
-    {% else if request.session.gamer_data_verified == 2 %}
+    {% elif request.session.gamer_data_verified == 2 %}
 
         {% if request.session.gamer_authority <= 3 %}
 
@@ -43,7 +43,7 @@
                 </div>
             {% endfor %}
 
-        {% else if request.session.gamer_authority == 4 %}
+        {% elif request.session.gamer_authority == 4 %}
 
             <div class="cat row alert alert-success">
 			    <div class=" bullet" > </div>

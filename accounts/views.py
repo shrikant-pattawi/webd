@@ -82,6 +82,8 @@ def team(request):
     mem3_ = User_details.objects.none()
     mem4_ = User_details.objects.none()
 
+    mem6 = User_details.objects.none()
+
     for j in mem1:
         f=0
         for i in mem5 :
