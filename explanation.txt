@@ -1,0 +1,17 @@
+authority
+
+1-3 team member
+
+4 team leader
+
+5 prof
+
+data verified
+
+0 default
+
+1 under verification
+
+2 details verified now set up team
+
+3 >= team complete

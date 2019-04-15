@@ -7,6 +7,7 @@ from .models import User_details
 from .models import user_requests
 from django.core.exceptions import ObjectDoesNotExist
 
+
 def user_signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -17,6 +18,7 @@ def user_signup(request):
     else:
         form = UserCreationForm()
     return render(request,'accounts/signup.html',{'form':form})
+
 
 def user_login(request):
     if request.method == 'POST':
@@ -35,10 +37,12 @@ def user_login(request):
         form = AuthenticationForm()
     return render(request,'accounts/login.html',{'form':form})
 
+
 def user_logout(request):
     if request.method == 'POST':
         logout(request)
         return redirect('Project_Allotment_Portal:home')
+
 
 def user_profile(request):
     update(request)
@@ -53,23 +57,12 @@ def user_profile(request):
     else:
         form = forms.ProfileDetails()
 
-        # try:
-        #     form = forms.ProfileDetails()
-        #     temp_ = User_details.objects.get(user_user=request.user)
-        #     verification_status = temp_.data_verified
-        # except ObjectDoesNotExist:
-        #     form = forms.ProfileDetails()
-        #     verification_status = 0
-
-        # if 'gamer' in request.session:
-        #     return render(request, 'accounts/test.html')
-        #     #form = forms.ProfileDetails(instance=User_details.objects.get(user_reg_no=request.session['gamer']));
-        # else:
-        #     form = forms.ProfileDetails()
     return render(request, 'accounts/profile.html', {'form':form} )
 
 
 def team(request):
+
+    update(request)
 
     if request.method == 'POST':
         data = request.POST.copy()
@@ -78,7 +71,7 @@ def team(request):
         req.user_from = request.user
         req.user_to = User_details.objects.get(user_reg_no = reg ).user_user
         req.save()
-    update(request)
+
     mem1 = User_details.objects.filter(authority=1)
     mem2 = User_details.objects.filter(authority=2)
     mem3 = User_details.objects.filter(authority=3)
@@ -89,18 +82,15 @@ def team(request):
     mem3_ = User_details.objects.none()
     mem4_ = User_details.objects.none()
 
-    # f=1
-    # while f == 1 :
-    #     f=0
     for j in mem1:
         f=0
         for i in mem5 :
             if j.user_user == i.user_to:
-                # mem1.exclude(user_user = i.user_user )
                 f=1
                 break
         if f==0:
             mem1_ |= User_details.objects.filter(user_user = j.user_user)
+
     for j in mem2:
         f=0
         for i in mem5 :
@@ -110,6 +100,7 @@ def team(request):
                 break
         if f==0:
             mem2_ |= User_details.objects.filter(user_user = j.user_user)
+
     for j in mem3:
         f=0
         for i in mem5 :
@@ -119,6 +110,7 @@ def team(request):
                 break
         if f==0:
             mem3_ |= User_details.objects.filter(user_user = j.user_user)
+
     for j in mem4:
         f=0
         for i in mem5 :
@@ -129,29 +121,19 @@ def team(request):
         if f==0:
             mem4_ |= User_details.objects.filter(user_user = j.user_user)
 
-    # for j in mem5:
-    #     for i in mem2 :
-    #         if i.user_user == j.user_to:
-    #             mem1.exclude(user_user = i.user_user )
-    # for j in mem5:
-    #     for i in mem3 :
-    #         if i.user_user == j.user_to:
-    #             mem1.exclude(user_user = i.user_user )
-    # for j in mem5:
-    #     for i in mem4 :
-    #         if i.user_user == j.user_to:
-    #             mem1.exclude(user_user = i.user_user )
 
+    return render(request, 'accounts/team.html', {'mem1':mem1_, 'mem2':mem2_, 'mem3':mem3_, 'mem4':mem4_, 'mem5':mem5 , 'mem6':mem6} )
 
-    return render(request, 'accounts/team.html', {'mem1':mem1_, 'mem2':mem2_, 'mem3':mem3_, 'mem4':mem4_, 'mem5':mem5})
 
 def validate(request):
     update(request)
     return render(request, 'accounts/validate.html')
 
+
 def requests(request):
     update(request)
     return render(request, 'accounts/requests.html')
+
 
 def update(request):
     try:

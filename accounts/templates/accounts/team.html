@@ -21,61 +21,45 @@
 
 
 {% block content %}
-    {% if request.session.gamer_data_verified <= 1 %}
-        <h1> Please wait for your details verification first. </h1>
-    {% else %}
 
-        {% with 1 as flag %}
+    {% if request.session.gamer_data_verified <= 1 %}
+
+        <h1> Please wait for your details verification first. </h1>
+
+    {% else if request.session.gamer_data_verified == 2 %}
 
         {% if request.session.gamer_authority <= 3 %}
+
             {% for mem in mem4 %}
-{#                {% for i in mem5 %}#}
-{#                    {% if i.user_to == mem.user_user %}#}
-{#                        {% flag1=0 %}#}
-{#                    {% endif %}#}
-{#                {% endfor %}#}
-{#                {% if flag == 1 %}#}
-                    <div class="cat row alert alert-success">
-                        <div class="bullet" > </div>
-                        <span class="name" style="padding: 10px; margin: 0px 10px 0px 10px;"> {{ mem.user_name }} </span>
-                        <span class="reg_no" style="padding: 10px; margin: 0px 10px 0px 10px;"> {{ mem.user_reg_no }} </span>
-                        <form  style="display: inline;" class="my-form" action="{% url 'accounts:team' %} " method="post">
-                            {% csrf_token %}
-                            <input name="reg" style="display: none;" type="text" value="{{ mem.user_reg_no }}">
-                            <input type="submit" value="Request">
-                        </form>
-    {#                    <button class=""></button>                    #}
-    {#                    <div class="all_pro" style="display: block;">#}
-    {#                        <div class=" col-sm-12 product">#}
-    {#                            <div class="pic"  >#}
-    {#                                {{ mem.user_name }}#}
-    {#                            </div>#}
-    {#                            <div class="title">#}
-    {#                                {{ mem.user_name }}#}
-    {#                            </div>#}
-    {#                            <div class="description">#}
-    {#                                {{ mem.user_reg_no }}#}
-    {#                            </div>#}
-    {#                            <div class="rate">#}
-    {#                                <form style="display: inline;" class="my-form" action="{% url 'accounts:team' %} "#}
-    {#                                      method="post">#}
-    {#                                     {% csrf_token %}#}
-    {#                                     <input style="display: none;" type="text" value="{{ mem.user_reg_no }}">#}
-    {#                                     <input type="submit" value="Request">#}
-    {#                                </form>#}
-    {#                            </div>#}
-    {#                        </div>#}
-    {#                        <div class="product col-sm-12"> </div>#}
-    {#                        <div class="product col-sm-12"> </div>#}
-    {#                        <div class="product col-sm-12"> </div>#}
-    {#			        </div>#}
-                    </div>
-{#                {% endif %}#}
+                <div class="cat row alert alert-success">
+                    <div class="bullet" > </div>
+                    <span class="name" style="padding: 10px; margin: 0px 10px 0px 10px;"> {{ mem.user_name }} </span>
+                    <span class="reg_no" style="padding: 10px; margin: 0px 10px 0px 10px;"> {{ mem.user_reg_no }} </span>
+                    <form  style="display: inline;" class="my-form" action="{% url 'accounts:team' %} " method="post">
+                        {% csrf_token %}
+                        <input name="reg" style="display: none;" type="text" value="{{ mem.user_reg_no }}">
+                        <input type="submit" value="Request">
+                    </form>
+                </div>
             {% endfor %}
 
         {% else %}
 
+
         {% endif %}
-    {% endwith %}
+
+    {% else %}
+
+        <h1>    Your team has been completed. </h1>
+
+            {% for mem in mem6 %}
+                <div class="cat row alert alert-success">
+                    <div class="bullet" > </div>
+                    <span class="name" style="padding: 10px; margin: 0px 10px 0px 10px;"> {{ mem.user_name }} </span>
+                    <span class="reg_no" style="padding: 10px; margin: 0px 10px 0px 10px;"> {{ mem.user_reg_no }} </span>
+                </div>
+            {% endfor %}
+
     {% endif %}
+
 {% endblock %}
