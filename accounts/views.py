@@ -134,7 +134,25 @@ def validate(request):
 
 def requests(request):
     update(request)
-    return render(request, 'accounts/requests.html')
+
+    if request.method == 'POST':
+        pass
+        # data = request.POST.copy()
+        # reg = data.get('reg')
+        # req = user_requests()
+        # req.user_from = request.user
+        # req.user_to = User_details.objects.get(user_reg_no = reg ).user_user
+        # req.save()
+
+    mem4 = User_details.objects.none()
+    mem6 = User_details.objects.none()
+
+    req = user_requests.objects.filter(user_to=request.user)
+
+    for i in req :
+        mem4 |= User_details.objects.filter(user_user = i.user_from)
+
+    return render(request, 'accounts/requests.html',{'mem4':mem4,'mem6':mem6})
 
 
 def update(request):
