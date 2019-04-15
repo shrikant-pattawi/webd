@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68938e61-8d27-44d8-bade-73ac401bccfc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/team.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Allotment_Portal/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Allotment_Portal/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,22 +56,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/team.html">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2210">
-              <caret line="130" column="11" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="11" />
+            <state relative-caret-position="401">
+              <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.py">
+        <entry file="file://$PROJECT_DIR$/Project_Allotment_Portal/templates/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="214">
+              <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -187,7 +183,6 @@
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/views.py" />
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/models.py" />
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/admin.py" />
-        <option value="$PROJECT_DIR$/Project_Allotment_Portal/templates/contact.html" />
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/templates/base.html" />
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/static/Project_Allotment_Portal/stylesheet/contact.css" />
         <option value="$PROJECT_DIR$/accounts/admin.py" />
@@ -198,6 +193,7 @@
         <option value="$PROJECT_DIR$/accounts/views.py" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/team.html" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/Project_Allotment_Portal/templates/contact.html" />
       </list>
     </option>
   </component>
@@ -225,7 +221,13 @@
             <path>
               <item name="webd" type="b2602c69:ProjectViewProjectNode" />
               <item name="webd" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
+              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webd" type="462c0819:PsiDirectoryNode" />
+              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -442,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555341130424</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="test scripts finally working">
+      <created>1555350155303</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1555350155303</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -472,10 +481,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32845894" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4955654" weight="0.33858266" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.4955654" visible="true" weight="0.33853006" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32845894" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5044346" side_tool="true" weight="0.33970752" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4977827" visible="true" weight="0.32516703" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4977827" weight="0.32516703" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295838" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -547,7 +556,8 @@
     <MESSAGE value="did some garbage management &#10;&#10;Also added test scripts" />
     <MESSAGE value="did more garbage management in profile page" />
     <MESSAGE value="updated team creation page for normal members as well." />
-    <option name="LAST_COMMIT_MESSAGE" value="updated team creation page for normal members as well." />
+    <MESSAGE value="test scripts finally working" />
+    <option name="LAST_COMMIT_MESSAGE" value="test scripts finally working" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/my_own_test/__init__.py">
@@ -698,19 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="26" column="80" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project_Allotment_Portal/templates/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="94" selection-start-line="5" selection-start-column="94" selection-end-line="5" selection-end-column="94" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#form#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#form#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -869,11 +866,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+        <state relative-caret-position="401">
+          <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_Allotment_Portal/templates/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
         </state>
       </provider>
     </entry>
