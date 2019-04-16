@@ -78,6 +78,7 @@ def team(request):
     mem3 = User_details.objects.filter(authority=3).filter(data_verified=2)
     mem4 = User_details.objects.filter(authority=4).filter(data_verified=2)
     mem5 = user_requests.objects.filter(user_from=request.user)
+    mem5_ = user_requests.objects.filter(user_to=request.user)
     mem1_ = User_details.objects.none()
     mem2_ = User_details.objects.none()
     mem3_ = User_details.objects.none()
@@ -91,7 +92,16 @@ def team(request):
             if j.user_user == i.user_to:
                 f=1
                 break
+        for i in mem5_ :
+            if j.user_user == i.user_from:
+                f=1
+                break
         if f==0:
+            for i in mem5_:
+                if j.user_user == i.user_to:
+                    f = 1
+                    break
+        if f==0 :
             mem1_ |= User_details.objects.filter(user_user = j.user_user)
 
     for j in mem2:
@@ -101,6 +111,12 @@ def team(request):
                 # mem1.exclude(user_user = i.user_user )
                 f=1
                 break
+        if f==0:
+            for i in mem5_:
+                if j.user_user == i.user_from:
+                    # mem1.exclude(user_user = i.user_user )
+                    f = 1
+                    break
         if f==0:
             mem2_ |= User_details.objects.filter(user_user = j.user_user)
 
@@ -112,6 +128,12 @@ def team(request):
                 f=1
                 break
         if f==0:
+            for i in mem5_ :
+                if j.user_user == i.user_from:
+                    # mem1.exclude(user_user = i.user_user )
+                    f = 1
+                    break
+        if f==0:
             mem3_ |= User_details.objects.filter(user_user = j.user_user)
 
     for j in mem4:
@@ -121,6 +143,12 @@ def team(request):
                 # mem1.exclude(user_user = i.user_user )
                 f=1
                 break
+        if f==0:
+            for i in mem5_:
+                if j.user_user == i.user_from:
+                    # mem1.exclude(user_user = i.user_user )
+                    f = 1
+                    break
         if f==0:
             mem4_ |= User_details.objects.filter(user_user = j.user_user)
 
