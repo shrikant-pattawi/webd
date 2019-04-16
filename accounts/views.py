@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from . import forms
 from .models import User_details
 from .models import user_requests
+from .models import Team_details
 from django.core.exceptions import ObjectDoesNotExist
 
 
@@ -136,8 +137,19 @@ def requests(request):
     update(request)
 
     if request.method == 'POST':
+        data = request.POST.copy()
+        reg = data.get('reg')
+
+        if request.session['gamer_authority'] == 4 :
+            team = Team_details.objects.filter(team_leader=request.user)
+            person = User_details.objects.get(user_reg_no = reg )
+            if person.authority == 1:
+                team.team_member_1 = person.user_user
+        else :
+
+
+
         pass
-        # data = request.POST.copy()
         # reg = data.get('reg')
         # req = user_requests()
         # req.user_from = request.user

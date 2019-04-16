@@ -47,10 +47,10 @@ class Team_details(models.Model):
     # team_leader_name=models.CharField(verbose_name="team_leader",max_length=100,default=1)
 
     team_name = models.CharField(verbose_name="team_name",max_length=100)
-    team_leader = models.ForeignKey(User, related_name="leader", default=None, on_delete=models.CASCADE)
+    team_leader = models.ForeignKey(User, related_name="leader", default=None, unique=True, on_delete=models.CASCADE)
+    team_member_1 = models.ForeignKey(User, default=None, related_name="member1", on_delete=models.SET_NULL, null=True)
     team_member_2 = models.ForeignKey(User, default=None, related_name="member2", on_delete=models.SET_NULL, null=True)
     team_member_3 = models.ForeignKey(User, default=None, related_name="member3", on_delete=models.SET_NULL, null=True)
-    team_member_4 = models.ForeignKey(User, default=None, related_name="member4", on_delete=models.SET_NULL, null=True)
     team_cpi = models.DecimalField(verbose_name="cpi", max_digits=4 , decimal_places=2,blank=False)
 
 
