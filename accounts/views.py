@@ -149,6 +149,16 @@ def team(request):
                     # mem1.exclude(user_user = i.user_user )
                     f = 1
                     break
+
+        t = Team_details.objects.get(team_leader = j.user_user)
+
+        if request.session['gamer_authority'] == 1 and t.team_member_1 != None :
+            f=1
+        elif request.session['gamer_authority'] == 2 and t.team_member_2 != None :
+            f=1
+        elif request.session['gamer_authority'] == 3 and t.team_member_3 != None :
+            f=1
+
         if f==0:
             mem4_ |= User_details.objects.filter(user_user = j.user_user)
 
