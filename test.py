@@ -6,6 +6,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE","Project.settings")
 django.setup()
 
 from accounts.models import User_details
+from accounts.models import Team_details
 from django.contrib.auth.models import User
 
 
@@ -48,7 +49,14 @@ def groups() :
             j.authority = i
             j.save()
 
+    temp = User_details.objects.filter(data_verified=2).order_by('user_cpi')[(0) * a:1 * a]
+    for j in temp:
+        x = Team_details()
+        x.team_cpi = j.user_cpi
+        x.team_leader = j.user_user
+        x.team_name = j.user_name
+        x.save()
 
-#populate(40)
+populate(40)
 verifyall()
 groups()

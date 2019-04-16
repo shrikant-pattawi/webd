@@ -124,6 +124,23 @@ def team(request):
         if f==0:
             mem4_ |= User_details.objects.filter(user_user = j.user_user)
 
+    if request.session['gamer_authority'] == 1:
+        tm = Team_details.objects.get(team_member_1=request.user)
+        pass
+    elif request.session['gamer_authority'] == 2:
+        tm = Team_details.objects.get(team_member_2=request.user)
+        pass
+    elif request.session['gamer_authority'] == 3:
+        tm = Team_details.objects.get(team_member_3=request.user)
+        pass
+    elif request.session['gamer_authority'] == 4:
+        tm = Team_details.objects.get(team_leader=request.user)
+        pass
+
+    mem6 |= User_details.objects.filter(user_user=team_leader)
+    mem6 |= User_details.objects.filter(user_user=team_member_3)
+    mem6 |= User_details.objects.filter(user_user=team_member_2)
+    mem6 |= User_details.objects.filter(user_user=team_member_1)
 
     return render(request, 'accounts/team.html', {'mem1':mem1_, 'mem2':mem2_, 'mem3':mem3_, 'mem4':mem4_, 'mem5':mem5 , 'mem6':mem6} )
 
@@ -228,6 +245,25 @@ def requests(request):
 
     for i in req :
         mem4 |= User_details.objects.filter(user_user = i.user_from)
+
+
+    if request.session['gamer_authority'] == 1 :
+        tm = Team_details.objects.get(team_member_1=request.user)
+        pass
+    elif request.session['gamer_authority'] == 2 :
+        tm = Team_details.objects.get(team_member_2=request.user)
+        pass
+    elif request.session['gamer_authority'] == 3 :
+        tm = Team_details.objects.get(team_member_3=request.user)
+        pass
+    elif request.session['gamer_authority'] ==4 :
+        tm = Team_details.objects.get(team_leader=request.user)
+        pass
+
+    mem6 |= User_details.objects.filter(user_user=team_leader)
+    mem6 |= User_details.objects.filter(user_user=team_member_3)
+    mem6 |= User_details.objects.filter(user_user=team_member_2)
+    mem6 |= User_details.objects.filter(user_user=team_member_1)
 
     return render(request, 'accounts/requests.html',{'mem4':mem4,'mem6':mem6})
 
