@@ -123,6 +123,14 @@ def team(request):
                 break
         if f==0:
             mem4_ |= User_details.objects.filter(user_user = j.user_user)
+
+
+    team_mems=0
+    team_mems_1=0
+    team_mems_2=0
+    team_mems_3=0
+
+
     f=0;
     if request.session['gamer_authority'] == 1:
         try :
@@ -142,6 +150,15 @@ def team(request):
     elif request.session['gamer_authority'] == 4:
         try :
             tm = Team_details.objects.get(team_leader=request.user)
+            if tm.team_member_1 != None:
+                team_mems += 1
+                team_mems_1 += 1
+            if tm.team_member_2 != None:
+                team_mems+=2
+                team_mems_2+=1
+            if tm.team_member_3 != None:
+                team_mems+=4
+                team_mems_3+=1
         except ObjectDoesNotExist:
             f=1
 
@@ -151,7 +168,7 @@ def team(request):
         mem6 |= User_details.objects.filter(user_user=tm.team_member_2)
         mem6 |= User_details.objects.filter(user_user=tm.team_member_1)
 
-    return render(request, 'accounts/team.html', {'mem1':mem1_, 'mem2':mem2_, 'mem3':mem3_, 'mem4':mem4_, 'mem5':mem5 , 'mem6':mem6} )
+    return render(request, 'accounts/team.html', {'mem1':mem1_, 'mem2':mem2_, 'mem3':mem3_, 'mem4':mem4_, 'mem5':mem5 , 'mem6':mem6, 'team_mems':team_mems, 'team_mems_1':team_mems_1, 'team_mems_2':team_mems_2, 'team_mems_3':team_mems_3} )
 
 
 def validate(request):

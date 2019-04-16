@@ -24,7 +24,7 @@ def populate(n) :
         us_det.user_gender = 'M'
         us_det.user_cpi = random.randint(1,1000)/100.0
         us_det.user_bio = "hi bye"
-        us_det.contact = 1000000000+i
+        us_det.contact = 100000000+i
         us_det.authority = 0
         us_det.data_verified =1
         us_det.save()
