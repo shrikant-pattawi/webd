@@ -73,10 +73,10 @@ def team(request):
         req.user_to = User_details.objects.get(user_reg_no = reg ).user_user
         req.save()
 
-    mem1 = User_details.objects.filter(authority=1)
-    mem2 = User_details.objects.filter(authority=2)
-    mem3 = User_details.objects.filter(authority=3)
-    mem4 = User_details.objects.filter(authority=4)
+    mem1 = User_details.objects.filter(authority=1).filter(data_verified=2)
+    mem2 = User_details.objects.filter(authority=2).filter(data_verified=2)
+    mem3 = User_details.objects.filter(authority=3).filter(data_verified=2)
+    mem4 = User_details.objects.filter(authority=4).filter(data_verified=2)
     mem5 = user_requests.objects.filter(user_from=request.user)
     mem1_ = User_details.objects.none()
     mem2_ = User_details.objects.none()
@@ -139,22 +139,36 @@ def requests(request):
     if request.method == 'POST':
         data = request.POST.copy()
         reg = data.get('reg')
+        person = User_details.objects.get(user_reg_no=reg)
 
         if request.session['gamer_authority'] == 4 :
+
             team = Team_details.objects.filter(team_leader=request.user)
-            person = User_details.objects.get(user_reg_no = reg )
-            if person.authority == 1:
+            if person.authority == 1 :
                 team.team_member_1 = person.user_user
+            elif person.authority == 2 :
+                team.team_member_2 = person.user_user
+            elif person.authority == 3 :
+                team.team_member_3 = person.user_user
+
         else :
 
+            team = Team_details.objects.filter(team_leader=person.user_user)
+            if request.session['gamer_authority'] == 1:
+                team.team_member_1 = request.user
+            elif request.session['gamer_authority'] == 2:
+                team.team_member_2 = request.user
+            elif request.session['gamer_authority'] == 3:
+                team.team_member_3 = request.user
 
+            #   Now team is updated and do rest all tasks
 
-        pass
-        # reg = data.get('reg')
-        # req = user_requests()
-        # req.user_from = request.user
-        # req.user_to = User_details.objects.get(user_reg_no = reg ).user_user
-        # req.save()
+            x = Team_details.objects.filter(user_user=request.user)
+            x.data_verified = 3
+
+            user_requests.objects.filter(user_from=request.user).delete()
+            user_requests.objects.filter(user_to=request.user).delete()
+
 
     mem4 = User_details.objects.none()
     mem6 = User_details.objects.none()
