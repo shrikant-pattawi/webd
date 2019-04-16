@@ -40,16 +40,16 @@ def verifyall() :
 
 def groups() :
 
-    n = len(User_details.objects.filter(data_verified=2))
+    n = len(User_details.objects.filter(data_verified=2).filter(authority__lte = 4))
     a = math.ceil(n/4)
 
     for i in range (1,5):
-        temp = User_details.objects.filter(data_verified=2).order_by('user_cpi')[(i-1)*a:i*a]
+        temp = User_details.objects.filter(data_verified=2).filter(authority__lte = 4).order_by('user_cpi')[(i-1)*a:i*a]
         for j in temp :
             j.authority = 5-i
             j.save()
 
-    temp = User_details.objects.filter(data_verified=2).order_by('user_cpi')[(0) * a:1 * a]
+    temp = User_details.objects.filter(data_verified=2).filter(authority__lte = 4).order_by('user_cpi')[(0) * a:1 * a]
     for j in temp:
         x = Team_details()
         x.team_cpi = j.user_cpi
