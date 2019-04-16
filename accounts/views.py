@@ -143,31 +143,82 @@ def requests(request):
 
         if request.session['gamer_authority'] == 4 :
 
-            team = Team_details.objects.filter(team_leader=request.user)
+            team = Team_details.objects.get(team_leader=request.user)
             if person.authority == 1 :
                 team.team_member_1 = person.user_user
+                temp = User_details.objects.filter(authority=1)
+                for i in temp :
+                    user_requests.objects.filter(user_from=request.user).filter(user_to=i.user_user).delete()
+                    user_requests.objects.filter(user_from=i.user_user).filter(user_to=request.user).delete()
+
             elif person.authority == 2 :
                 team.team_member_2 = person.user_user
+                temp = User_details.objects.filter(authority=2)
+                for i in temp:
+                    user_requests.objects.filter(user_from=request.user).filter(user_to=i.user_user).delete()
+                    user_requests.objects.filter(user_from=i.user_user).filter(user_to=request.user).delete()
+
             elif person.authority == 3 :
                 team.team_member_3 = person.user_user
+                temp = User_details.objects.filter(authority=3)
+                for i in temp:
+                    user_requests.objects.filter(user_from=request.user).filter(user_to=i.user_user).delete()
+                    user_requests.objects.filter(user_from=i.user_user).filter(user_to=request.user).delete()
+
+            team.save()
+
+            if team.team_member_1 != None and team.team_member_2 != None and team.team_member_3 != None :
+                x=User_details.objects.get(user_user=request.user)
+                x.data_verified=3
+                x.save()
+
+            user_requests.objects.filter(user_from=person.user_user).delete()
+            user_requests.objects.filter(user_to=person.user_user).delete()
+
+            person.data_verified=3
+            person.save()
 
         else :
 
-            team = Team_details.objects.filter(team_leader=person.user_user)
+            team = Team_details.objects.get(team_leader=person.user_user)
+
             if request.session['gamer_authority'] == 1:
                 team.team_member_1 = request.user
+                temp = User_details.objects.filter(authority=1)
+                for i in temp:
+                    user_requests.objects.filter(user_from=person.user_user).filter(user_to=i.user_user).delete()
+                    user_requests.objects.filter(user_from=i.user_user).filter(user_to=person.user_user).delete()
+
             elif request.session['gamer_authority'] == 2:
                 team.team_member_2 = request.user
+                temp = User_details.objects.filter(authority=1)
+                for i in temp:
+                    user_requests.objects.filter(user_from=person.user_user).filter(user_to=i.user_user).delete()
+                    user_requests.objects.filter(user_from=i.user_user).filter(user_to=person.user_user).delete()
+
             elif request.session['gamer_authority'] == 3:
                 team.team_member_3 = request.user
+                temp = User_details.objects.filter(authority=1)
+                for i in temp:
+                    user_requests.objects.filter(user_from=person.user_user).filter(user_to=i.user_user).delete()
+                    user_requests.objects.filter(user_from=i.user_user).filter(user_to=person.user_user).delete()
+
+            team.save()
 
             #   Now team is updated and do rest all tasks
 
             x = Team_details.objects.filter(user_user=request.user)
             x.data_verified = 3
+            x.save()
+
+            if team.team_member_1 != None and team.team_member_2 != None and team.team_member_3 != None:
+                person.data_verified = 3
+                person.save()
 
             user_requests.objects.filter(user_from=request.user).delete()
             user_requests.objects.filter(user_to=request.user).delete()
+
+
 
 
     mem4 = User_details.objects.none()

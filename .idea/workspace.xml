@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68938e61-8d27-44d8-bade-73ac401bccfc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/javascript/base.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/javascript/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/javascript/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/javascript/team.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/fb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/fb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/fb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/fb2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/instagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/instagram2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/twitter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/twitter2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/youtube.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/pictures/logos/youtube2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/stylesheet/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/stylesheet/contact.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/stylesheet/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/stylesheet/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/stylesheet/signup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/Project_Allotment_Portal/stylesheet/team.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -66,13 +42,52 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="DockManager">
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/explanation.txt">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="119">
+                    <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/accounts/models.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="163">
+                    <caret line="52" column="53" lean-forward="true" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="56" />
+                    <folding>
+                      <element signature="e#0#28#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/accounts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1955">
-              <caret line="141" selection-start-line="141" selection-end-line="141" />
+            <state relative-caret-position="391">
+              <caret line="182" column="73" selection-start-line="182" selection-start-column="73" selection-end-line="182" selection-end-column="73" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -141,13 +156,11 @@
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/urls.py" />
         <option value="$PROJECT_DIR$/accounts/urls.py" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/validate.html" />
-        <option value="$PROJECT_DIR$/Project_Allotment_Portal/views.py" />
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/models.py" />
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/admin.py" />
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/templates/base.html" />
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/static/Project_Allotment_Portal/stylesheet/contact.css" />
         <option value="$PROJECT_DIR$/accounts/admin.py" />
-        <option value="$PROJECT_DIR$/explanation.txt" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/login.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/profile.html" />
         <option value="$PROJECT_DIR$/test.py" />
@@ -156,8 +169,10 @@
         <option value="$PROJECT_DIR$/Project_Allotment_Portal/static/Project_Allotment_Portal/javascript/team.js" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/team.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/requests.html" />
-        <option value="$PROJECT_DIR$/accounts/views.py" />
+        <option value="$PROJECT_DIR$/Project_Allotment_Portal/views.py" />
+        <option value="$PROJECT_DIR$/explanation.txt" />
         <option value="$PROJECT_DIR$/accounts/models.py" />
+        <option value="$PROJECT_DIR$/accounts/views.py" />
       </list>
     </option>
   </component>
@@ -174,7 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,65 +201,11 @@
               <item name="webd" type="462c0819:PsiDirectoryNode" />
               <item name="accounts" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="webd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webd" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webd" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webd" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webd" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webd" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webd" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webd" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
-              <item name="pictures" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webd" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="Project_Allotment_Portal" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheet" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,17 +219,18 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\All_Projects\Python\Django\webd\Project_Allotment_Portal\static\Project_Allotment_Portal\javascript" />
-      <recent name="E:\All_Projects\Python\Django\webd\Project_Allotment_Portal" />
-      <recent name="E:\All_Projects\Python\Django\webd\Project_Allotment_Portal\static\Project_Allotment_Portal\pictures" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\All_Projects\Python\Django\webd\Project_Allotment_Portal\static\Project_Allotment_Portal\pictures\logos" />
       <recent name="E:\All_Projects\Python\Django\webd\Project_Allotment_Portal\static\Project_Allotment_Portal\pictures" />
       <recent name="E:\All_Projects\Python\Django\webd\Project_Allotment_Portal\static\Project_Allotment_Portal\stylesheet" />
       <recent name="E:\All_Projects\Python\Django\webd\accounts\static\accounts\javascript" />
       <recent name="E:\All_Projects\Python\Django\webd\accounts\static\accounts\stylesheet" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\All_Projects\Python\Django\webd\accounts" />
+      <recent name="E:\All_Projects\Python\Django\webd\Project_Allotment_Portal\static\Project_Allotment_Portal\javascript" />
+      <recent name="E:\All_Projects\Python\Django\webd\Project_Allotment_Portal" />
+      <recent name="E:\All_Projects\Python\Django\webd\Project_Allotment_Portal\static\Project_Allotment_Portal\pictures" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -478,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555363262704</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="deploying static files copies">
+      <created>1555406035335</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1555406035336</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -495,8 +463,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39356986" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26940134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -507,10 +476,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32845894" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.4955654" visible="true" weight="0.3374578" />
-      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32739422" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4955654" weight="0.3374578" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32733408" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5044346" side_tool="true" weight="0.33970752" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4977827" weight="0.32845894" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4977827" visible="true" weight="0.32845894" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295838" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -585,7 +554,8 @@
     <MESSAGE value="test scripts finally working" />
     <MESSAGE value="updated contact info" />
     <MESSAGE value="request page frontend complate and working &#10;&#10;acceptance ackend left" />
-    <option name="LAST_COMMIT_MESSAGE" value="request page frontend complate and working &#10;&#10;acceptance ackend left" />
+    <MESSAGE value="deploying static files copies" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploying static files copies" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/my_own_test/models.py">
@@ -667,16 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project_Allotment_Portal/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project_Allotment_Portal/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -732,13 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/explanation.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -887,6 +840,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Project_Allotment_Portal/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/team.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -894,10 +857,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/explanation.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="163">
+          <caret line="52" column="53" lean-forward="true" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="56" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -906,8 +876,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/accounts/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        <state relative-caret-position="391">
+          <caret line="182" column="73" selection-start-line="182" selection-start-column="73" selection-end-line="182" selection-end-column="73" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
