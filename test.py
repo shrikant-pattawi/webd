@@ -46,7 +46,7 @@ def groups() :
     for i in range (1,5):
         temp = User_details.objects.filter(data_verified=2).order_by('user_cpi')[(i-1)*a:i*a]
         for j in temp :
-            j.authority = i
+            j.authority = 5-i
             j.save()
 
     temp = User_details.objects.filter(data_verified=2).order_by('user_cpi')[(0) * a:1 * a]
