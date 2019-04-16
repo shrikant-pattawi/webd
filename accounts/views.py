@@ -233,7 +233,7 @@ def requests(request):
 
             #   Now team is updated and do rest all tasks
 
-            x = User_details.objects.filter(user_user=request.user)
+            x = User_details.objects.get(user_user=request.user)
             x.data_verified = 3
             x.save()
 
