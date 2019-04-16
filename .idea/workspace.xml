@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68938e61-8d27-44d8-bade-73ac401bccfc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/accounts/migrations/0006_auto_20190416_1829.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,8 +67,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/accounts/models.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="163">
-                    <caret line="52" column="53" lean-forward="true" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="56" />
+                  <state relative-caret-position="146">
+                    <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
                     <folding>
                       <element signature="e#0#28#0" expanded="true" />
                     </folding>
@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/accounts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="182" column="73" selection-start-line="182" selection-start-column="73" selection-end-line="182" selection-end-column="73" />
+            <state relative-caret-position="255">
+              <caret line="172" column="18" lean-forward="true" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -446,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555406035336</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="working on request management">
+      <created>1555418954421</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1555418954422</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -463,7 +470,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26940134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -476,10 +482,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32845894" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4955654" weight="0.3374578" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.4955654" visible="true" weight="0.3374578" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32733408" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5044346" side_tool="true" weight="0.33970752" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4977827" visible="true" weight="0.32845894" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4977827" weight="0.32845894" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295838" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -555,7 +561,8 @@
     <MESSAGE value="updated contact info" />
     <MESSAGE value="request page frontend complate and working &#10;&#10;acceptance ackend left" />
     <MESSAGE value="deploying static files copies" />
-    <option name="LAST_COMMIT_MESSAGE" value="deploying static files copies" />
+    <MESSAGE value="working on request management" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on request management" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/my_own_test/models.py">
@@ -866,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/accounts/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="52" column="53" lean-forward="true" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="56" />
+        <state relative-caret-position="146">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -876,8 +883,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/accounts/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="182" column="73" selection-start-line="182" selection-start-column="73" selection-end-line="182" selection-end-column="73" />
+        <state relative-caret-position="255">
+          <caret line="172" column="18" lean-forward="true" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
