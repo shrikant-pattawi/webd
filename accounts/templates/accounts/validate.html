@@ -38,14 +38,14 @@
                         </div>
                         <div class="description">
                             {{ mem_.user_reg_no }}
-                        </div>
-                        <div class="description">
+                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
                             {{ mem_.user_cpi }}
                         </div>
                         <div class="rate" style="pointer-events: all">
-                            <form  style="display: inline;" class="my-form" action="{% url 'accounts:requests' %} " method="post">
+                            <form  style="display: inline;" class="my-form" action="{% url 'accounts:validate' %} " method="post">
                                 {% csrf_token %}
-                                <input name="reg" style="display: none;" type="text" value="{{ mem.user_reg_no }}">
+                                <input name="reg" style="display: none;" type="text" value="{{ mem_.user_reg_no }}">
                                 <input type="submit" value="Verified">
                             </form>
                         </div>

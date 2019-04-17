@@ -202,7 +202,8 @@ def team(request):
                 team_mems_3+=1
         except ObjectDoesNotExist:
             f=1
-
+    else :
+        f=1
     if f==0:
         mem6 |= User_details.objects.filter(user_user=tm.team_leader)
         mem6 |= User_details.objects.filter(user_user=tm.team_member_3)
@@ -215,6 +216,14 @@ def team(request):
 def validate(request):
     update(request)
 
+    if request.method == 'POST':
+        data = request.POST.copy()
+        reg = data.get('reg')
+        print(reg)
+        us = User_details.objects.get(user_reg_no = reg )
+        us.data_verified = 2
+        us.save()
+
     mem = User_details.objects.filter(data_verified=1)
 
     if request.session['gamer_authority'] < 5 :
@@ -225,7 +234,6 @@ def validate(request):
 
 def requests(request):
     update(request)
-
 
     if request.session['gamer_authority'] > 4 :
         return redirect('Project_Allotment_Portal:home')
@@ -345,7 +353,8 @@ def requests(request):
             tm = Team_details.objects.get(team_leader=request.user)
         except ObjectDoesNotExist:
             f=1
-
+    else :
+        f=1
     if f==0:
         mem6 |= User_details.objects.filter(user_user=tm.team_leader)
         mem6 |= User_details.objects.filter(user_user=tm.team_member_3)
