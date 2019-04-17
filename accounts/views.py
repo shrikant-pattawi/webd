@@ -63,6 +63,9 @@ def user_profile(request):
 
 def team(request):
 
+    if request.session['gamer_authority'] > 4 :
+        return redirect('Project_Allotment_Portal:home')
+
     update(request)
 
     if request.method == 'POST':
@@ -211,11 +214,21 @@ def team(request):
 
 def validate(request):
     update(request)
-    return render(request, 'accounts/validate.html')
+
+    mem = User_details.objects.filter(data_verified=1)
+
+    if request.session['gamer_authority'] < 5 :
+        return redirect('Project_Allotment_Portal:home')
+
+    return render(request, 'accounts/validate.html',{'mem':mem})
 
 
 def requests(request):
     update(request)
+
+
+    if request.session['gamer_authority'] > 4 :
+        return redirect('Project_Allotment_Portal:home')
 
     if request.method == 'POST':
         data = request.POST.copy()

@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block quote %}
-    Your team is as strong as your weakest link so think carefully
+        Choose your commrades wisely
 {% endblock %}
 
 
@@ -24,7 +24,7 @@
 
     {% if request.session.gamer_data_verified <= 1 %}
 
-        <h1> Choose your commrades wisely </h1>
+        <h1> Please wait for your profile verification. </h1>
 
     {% elif request.session.gamer_data_verified == 2 %}
 
