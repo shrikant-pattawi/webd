@@ -15,3 +15,16 @@ data verified
 2 details verified now set up team
 
 3 >= team complete
+
+scripts
+
+move to main project directory one with manage.py in it and run following command to run scripts
+
+python script name
+
+verifyall.py    verify all users then group divide them also create teams based on leaders only leaders are added in each team not every member
+
+groups.py divide into groups and create team leaders based teams only leaders are added in each team by it.
+
+test.py create 40 users then does above tasks
+
