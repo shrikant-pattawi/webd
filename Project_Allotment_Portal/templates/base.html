@@ -61,6 +61,7 @@
                                 <li ><a href="{% url 'accounts:team' %}">Team</a></li>
                                 <li ><a href="{% url 'accounts:requests' %}">Requests</a></li>
                                 <li ><a href="{% url 'Project_Allotment_Portal:notification' %}">Notification</a></li>
+                                <li ><a href="{% url 'accounts:proff' %}">Professor</a></li>
                             {% endif %}
                             {% if request.session.gamer_authority >= 5 %}
                                 <li ><a href="{% url 'accounts:validate' %}">Validate</a></li>

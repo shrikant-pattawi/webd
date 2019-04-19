@@ -12,5 +12,5 @@ urlpatterns = [
     re_path(r'^team/$',views.team, name='team'),
     re_path(r'^validate/$',views.validate, name='validate'),
     re_path(r'^request/$', views.requests, name='requests'),
-
+    re_path(r'^professor/$', views.proff, name='proff'),
 ]

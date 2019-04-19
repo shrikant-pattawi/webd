@@ -364,6 +364,25 @@ def requests(request):
     return render(request, 'accounts/requests.html',{'mem4':mem4,'mem6':mem6})
 
 
+def proff(request):
+    update(request)
+
+    # if request.method == 'POST':
+    #     data = request.POST.copy()
+    #     reg = data.get('reg')
+    #     print(reg)
+    #     us = User_details.objects.get(user_reg_no = reg )
+    #     us.data_verified = 2
+    #     us.save()
+
+    mem = User_details.objects.filter(data_verified=5)
+
+    if request.session['gamer_authority'] >= 5 :
+        return redirect('Project_Allotment_Portal:home')
+
+    return render(request, 'accounts/professor.html',{'mem':mem})
+
+
 def update(request):
     try:
         if request.user.is_authenticated:
