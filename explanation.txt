@@ -16,6 +16,10 @@ data verified
 
 3 >= team complete
 
+4 >    Professor selected wait for verification
+
+5 >=    Complete
+
 scripts
 
 move to main project directory one with manage.py in it and run following command to run scripts

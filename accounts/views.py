@@ -375,12 +375,12 @@ def proff(request):
     #     us.data_verified = 2
     #     us.save()
 
-    mem = User_details.objects.filter(data_verified=5)
-
+    mem = User_details.objects.filter(authority=5).filter(data_verified=2)
+    mem6 = User_details.objects.none()
     if request.session['gamer_authority'] >= 5 :
         return redirect('Project_Allotment_Portal:home')
 
-    return render(request, 'accounts/professor.html',{'mem':mem})
+    return render(request, 'accounts/professor.html',{'mem4':mem,'mem6':mem6})
 
 
 def update(request):

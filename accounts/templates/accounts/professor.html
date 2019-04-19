@@ -7,15 +7,15 @@
 {% endblock %}
 
 {% block title %}
-    Requests
+    mentor
 {% endblock %}
 
 {% block title2 %}
-    Join a team
+    Choose your mentor
 {% endblock %}
 
 {% block quote %}
-        Choose your commrades wisely
+        Only the best shall get the best
 {% endblock %}
 
 
@@ -28,43 +28,42 @@
 
     {% elif request.session.gamer_data_verified == 2 %}
 
-        <div class="cat row alert alert-success" style="pointer-events: none;">
-            <div class="all_pro" style="display: block;">
+        <h1> Please wait for your team completion. </h1>
 
+    {% elif request.session.gamer_data_verified == 3 %}
+
+        {% if request.session.gamer_authority < 4 %}
+            <h1>    Please consult your team leader for professor priority list selection. </h1>
+        {% else %}
+            <form class="my-form" action="{% url 'accounts:proff' %}" method="post">
+                {% csrf_token %}
                 {% for mem in mem4 %}
-
-                    <div class=" col-sm-12 product">
-
-                        <div class="title">
-                            {{ mem.user_name }}
-                        </div>
-                        <div class="description">
-                            {{ mem.user_reg_no }}
-                        </div>
-                        <div class="rate" style="pointer-events: all">
-                            <form  style="display: inline;" class="my-form" action="{% url 'accounts:requests' %} " method="post">
-                                {% csrf_token %}
-                                <input name="reg" style="display: none;" type="text" value="{{ mem.user_reg_no }}">
-                                <input type="submit" value="Accept">
-                            </form>
-                        </div>
-                    </div>
+                   {{ mem.user_name }} :  <input type="number" name={{ mem.user_name }} required>
+                    <br>
                 {% endfor %}
-            </div>
-        </div>
+            </form>
+        {% endif %}
+
+    {% elif request.session.gamer_data_verified == 4 %}
+
+        {% if request.session.gamer_authority < 4 %}
+            <h1>    Please consult your team leader for professor priority list selection. </h1>
+        {% else %}
+            <h1>    Please wait for the professor selection process to get over. </h1>
+        {% endif %}
 
     {% else %}
 
-        <h1>    Your team has been completed. </h1>
+        <h1>    Your Mentor is  </h1>
 
             {% for mem in mem6 %}
                 <div class="cat row alert alert-success" style="cursor: context-menu">
-{#                    <div class="bullet" > </div>#}
                     <span class="name" style="padding: 10px; margin: 0px 10px 0px 10px;"> {{ mem.user_name }}  </span>
-                    <span class="reg_no" style="padding: 10px; margin: 10px 10px 0px 10px; font-size: 1.5em; position: relative; top: -6px; left: 15px; font-weight: bolder;"> {{ mem.user_reg_no }} </span>
+                    <span class="reg_no" style="padding: 10px; margin: 10px 10px 0px 10px; font-size: 1.5em; position: relative; top: -6px; left: 15px; font-weight: bolder;"> {{ mem.user_contact }} </span>
                 </div>
             {% endfor %}
 
     {% endif %}
 
 {% endblock %}
+
