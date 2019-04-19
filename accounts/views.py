@@ -367,7 +367,8 @@ def requests(request):
 def proff(request):
     update(request)
 
-    # if request.method == 'POST':
+    if request.method == 'POST':
+        pass
     #     data = request.POST.copy()
     #     reg = data.get('reg')
     #     print(reg)

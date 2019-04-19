@@ -6,6 +6,10 @@ class user_requests(models.Model):
     user_from = models.ForeignKey(User, default=None, related_name="user_from", on_delete=models.CASCADE)
     user_to = models.ForeignKey(User, default=None, related_name="user_to", on_delete=models.CASCADE)
 
+class priority(models.Model):
+    user = models.ForeignKey(User, default=None, related_name="_user", on_delete=models.CASCADE)
+    proff = models.ForeignKey(User, default=None, related_name="_proff", on_delete=models.CASCADE)
+    user_priority = models.DecimalField(verbose_name="priority", max_digits=4 , decimal_places=0,blank=False)
 
 class User_details(models.Model):
 
