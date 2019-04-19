@@ -1,9 +1,9 @@
 # using SendGrid's Python Library
 # https://github.com/sendgrid/sendgrid-python
 
-import sendgrid
-import os
-from sendgrid.helpers.mail import *
+# import sendgrid
+# import os
+# from sendgrid.helpers.mail import *
 
 
 #API_KEY=""
@@ -23,15 +23,15 @@ from sendgrid.helpers.mail import Mail
 
 def send_mail(to, subject, content):
     message = Mail(
-        from_email='sahaj@mnnit.ac.in',
-        to_emails=to,
+        from_email=to,
+        to_emails='sahaj@mnnit.ac.in',
         subject=subject,
         html_content=content)
-    try:
-        sg = SendGridAPIClient(os.environ.get(''))
-        response = sg.send(message)
-        print(response.status_code)
-        print(response.body)
-        print(response.headers)
-    except Exception as e:
-        print(e.message)
+    # try:
+    sg = SendGridAPIClient('')
+    response = sg.send(message)
+    print(response.status_code)
+    print(response.body)
+    print(response.headers)
+    # except Exception as e:
+    #     print(e.message)
