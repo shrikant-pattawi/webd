@@ -4,18 +4,23 @@
 {% block statics %}
     <link rel="stylesheet" type="text/css" href="{% static 'Project_Allotment_Portal/stylesheet/contact.css' %} " >
     <script type="text/javascript" src="{% static 'Project_Allotment_Portal/javascript/contact.js' %}"></script>
+    <style>
+        .jumbotron{
+            display: none;
+        }
+    </style>
 {% endblock %}
 
 {% block title %}
-
+    Contact
 {% endblock %}
 
 {% block title2 %}
-
+    Contact
 {% endblock %}
 
 {% block quote %}
-
+    We are always ready to help
 {% endblock %}
 
 {% block content %}
@@ -100,21 +105,22 @@
 {#            </div>#}
 {#	    </div>#}
 	    </div>
-	    <span class="spil"><br></span>
-	<form method="post" action="{% url 'Project_Allotment_Portal:contact' %}">
-		<input type="text" name="name" placeholder="Your Name" style="width: 48%; display: inline-block; height: 15%;" required />
-		<input name="email" type="text" placeholder="Your Email"  style="width: 48%; display: inline-block; height: 15%;" required/>
-		<br>
-		<br>
-		<input name="subject" type="text" placeholder="Subject" style="width: 96%; display: inline-block; height: 15%;"/>
-		<br>
-		<br>
-		<textarea placeholder="Message: *"  name="comment" rows="5" cols="40" required> comment
-		</textarea>
-            <br>
-            <br>
-		    <input type="submit" value="Submit" />
-		        <span class="spil"><br></span>
+	        <span class="spil"><br></span>
+            <form method="post" action="{% url 'Project_Allotment_Portal:contact' %}">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Your Name" style="width: 48%; display: inline-block; height: 15%;" required />
+                <input name="email" type="email" placeholder="Your Email"  style="width: 48%; display: inline-block; height: 15%;" required/>
+                <br>
+                <br>
+                <input name="subject" type="text" placeholder="Subject" style="width: 96%; display: inline-block; height: 15%;"/>
+                <br>
+                <br>
+                <textarea placeholder="Message: *"  name="comment" rows="5" cols="40" required> comment
+                </textarea>
+                <br>
+                <br>
+                <input type="submit" value="Submit" />
+                <span class="spil"><br></span>
 	        </form>
         </div>
     </div>
