@@ -12,5 +12,4 @@ class ProfileDetails(forms.ModelForm):
             'user_cpi',
             'user_bio',
             'user_contact',
-            'user_pic'
         ]
