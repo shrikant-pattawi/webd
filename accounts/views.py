@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth import login,logout
 from django.contrib.auth.models import User
 from . import forms
+from .models import priority
 from .models import User_details
 from .models import user_requests
 from .models import Team_details
@@ -367,14 +368,18 @@ def requests(request):
 def proff(request):
     update(request)
 
+    mem = User_details.objects.filter(authority=5).filter(data_verified=2)
+
     if request.method == 'POST':
-        pass
-    #     data = request.POST.copy()
-    #     reg = data.get('reg')
-    #     print(reg)
-    #     us = User_details.objects.get(user_reg_no = reg )
-    #     us.data_verified = 2
-    #     us.save()
+        data = request.POST.copy()
+        for i in mem :
+            x = priority()
+            x.user = request.user
+            x.proff = i.user_user
+            x.user_priority = data.get(i.user_name)
+            x.save()
+
+
 
     mem = User_details.objects.filter(authority=5).filter(data_verified=2)
     mem6 = User_details.objects.none()
