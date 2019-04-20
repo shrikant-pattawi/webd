@@ -32,7 +32,7 @@ def team_form() :
 
         try :
             x = User_details.objects.filter(authority=2).filter(data_verified=2).first()
-            i.team_member_1 = x.user_user
+            i.team_member_2 = x.user_user
             x.data_verified = 3
             x.save()
         except :
@@ -40,11 +40,14 @@ def team_form() :
 
         try :
             x = User_details.objects.filter(authority=3).filter(data_verified=2).first()
-            i.team_member_1 = x.user_user
+            i.team_member_3 = x.user_user
             x.data_verified = 3
             x.save()
         except :
             pass
         i.save()
+        y = User_details.objects.filter(user_user = i.team_leader)
+        y.data_verified = 3
+        y.save()
 
 team_form()
