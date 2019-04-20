@@ -7,29 +7,25 @@ django.setup()
 
 from accounts.models import User_details
 from accounts.models import Team_details
+from accounts.models import priority
 from django.contrib.auth.models import User
 
 
 
 def allot() :
 
+    team = Team_details.objects.all().order_by('-team_cpi')
 
-
-    for i in range(0,n) :
-        us = User.objects.create_user("test_proff_"+str(i), password='pass12@0')
-        us.save()
-
-        us_det = User_details()
-        us_det.user_user = us
-        us_det.user_reg_no = 20464000+i
-        us_det.user_email = "prof_user_" + str(i) + "@mnnit.ac.in"
-        us_det.user_name = "proff" + str(i)
-        us_det.user_gender = 'M'
-        us_det.user_cpi = random.randint(1,1000)/100.0
-        us_det.user_bio = "hi bye"
-        us_det.contact = 100000000+i
-        us_det.authority = 5
-        us_det.data_verified =2
-        us_det.save()
+    for i in team :
+        a = i.team_leader
+        x = priority.objects.filter(user=i.team_leader).order_by('user_priority')
+        for j in x :
+            i.professor = j.proff
+            i.save()
+            priority.objects.filter(proff=i.professor).delete()
+            priority.objects.filter(user=i.team_leader).delete()
+            break
+        i.data_verified = 5
+        i.save()
 
 allot()

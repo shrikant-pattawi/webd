@@ -35,6 +35,7 @@
         {% if request.session.gamer_authority < 4 %}
             <h1>    Please consult your team leader for professor priority list selection. </h1>
         {% else %}
+            <h1> Fill in numbers lowest is most wanted highest is least equal is any random </h1>
             <form class="my-form" action="{% url 'accounts:proff' %}" method="post">
                 {% csrf_token %}
                 {% for mem in mem4 %}

@@ -55,6 +55,7 @@ class Team_details(models.Model):
     team_member_1 = models.ForeignKey(User, default=None, related_name="member1", on_delete=models.SET_NULL, null=True)
     team_member_2 = models.ForeignKey(User, default=None, related_name="member2", on_delete=models.SET_NULL, null=True)
     team_member_3 = models.ForeignKey(User, default=None, related_name="member3", on_delete=models.SET_NULL, null=True)
+    professor = models.ForeignKey(User, default=None, related_name="professor", on_delete=models.SET_NULL, null=True)
     team_cpi = models.DecimalField(verbose_name="cpi", max_digits=4 , decimal_places=2,blank=False)
 
 

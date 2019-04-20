@@ -32,3 +32,8 @@ groups.py divide into groups and create team leaders based teams only leaders ar
 
 test.py create 40 users then does above tasks
 
+
+Priority
+
+Lower the priority means more I want it.
+

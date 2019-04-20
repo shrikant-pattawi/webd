@@ -386,6 +386,34 @@ def proff(request):
 
     mem = User_details.objects.filter(authority=5).filter(data_verified=2)
     mem6 = User_details.objects.none()
+
+    f = 0;
+    if request.session['gamer_authority'] == 1:
+        try:
+            tm = Team_details.objects.get(team_member_1=request.user)
+        except ObjectDoesNotExist:
+            f = 1
+    elif request.session['gamer_authority'] == 2:
+        try:
+            tm = Team_details.objects.get(team_member_2=request.user)
+        except ObjectDoesNotExist:
+            f = 1
+    elif request.session['gamer_authority'] == 3:
+        try:
+            tm = Team_details.objects.get(team_member_3=request.user)
+        except ObjectDoesNotExist:
+            f = 1
+    elif request.session['gamer_authority'] == 4:
+        try:
+            tm = Team_details.objects.get(team_leader=request.user)
+        except ObjectDoesNotExist:
+            f = 1
+    else:
+        f = 1
+
+    if f==0:
+        mem6 |= User_details.objects.filter(user_user=tm.professor)
+
     if request.session['gamer_authority'] >= 5 :
         return redirect('Project_Allotment_Portal:home')
 
