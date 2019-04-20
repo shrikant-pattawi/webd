@@ -379,7 +379,10 @@ def proff(request):
             x.user_priority = data.get(i.user_name)
             x.save()
 
-
+        t = User_details.objects.get(user_user=request.user)
+        t.data_verified = 4
+        t.save()
+        return redirect('Project_Allotment_Portal:home')
 
     mem = User_details.objects.filter(authority=5).filter(data_verified=2)
     mem6 = User_details.objects.none()
